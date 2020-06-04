@@ -3,12 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/ic_bg"
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:padding="20dp"
     tools:context=".MainActivity">
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/congrats" />
     <TextView
         android:id="@+id/tv_result"
         android:layout_width="wrap_content"
@@ -16,15 +23,15 @@
         android:layout_marginTop="25dp"
         android:text="Result"
         android:textColor="@android:color/white"
-        android:textSize="25sp"
+        android:textSize="30sp"
         android:textStyle="bold"/>
 
-    <ImageView
-        android:id="@+id/iv_trophy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="image"
-        android:src="@drawable/ic_trophy"/>
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="282dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/trophy" />
 
     <TextView
         android:id="@+id/tv_congratulations"
@@ -33,14 +40,14 @@
         android:layout_marginTop="16dp"
         android:text="Hey, Congratulations!"
         android:textColor="@android:color/white"
-        android:textSize="25sp"
+        android:textSize="22sp"
         android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="5dp"
         tools:text="Username"
         android:textColor="@android:color/white"
         android:textSize="22sp"
@@ -64,6 +71,8 @@
         android:textColor="@color/colorPrimary"
         android:textSize="18sp"
         android:textStyle="bold"/>
+
+
 
 
 </LinearLayout>

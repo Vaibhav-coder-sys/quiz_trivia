@@ -18,6 +18,13 @@ class ResultActivity : AppCompatActivity() {
         val totalQuestions = intent.getIntExtra(Constants.TOTAL_QUESTIONS,0)
         val correctAnswers = intent.getIntExtra(Constants.CORRECT_ANSWERS,0)
 
+        if(correctAnswers>5) {
+            tv_congratulations.text = "Hey, Congratulations!"
+        }
+        else {
+            tv_congratulations.text = "Better Luck Next Time"
+        }
+
         tv_score.text = "Your score is $correctAnswers out of $totalQuestions"
 
         btn_finish.setOnClickListener {

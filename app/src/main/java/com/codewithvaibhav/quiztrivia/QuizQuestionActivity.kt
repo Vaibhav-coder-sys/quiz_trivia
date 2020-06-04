@@ -32,7 +32,22 @@ class QuizQuestionActivity : AppCompatActivity(), View.OnClickListener {
 
          mUserName = intent.getStringExtra(Constants.USER_NAME)
 
-        mQuestionsList = Constants.getQuestions()
+        var number: Int = intent.getIntExtra("val",0)
+        if(number==1) {
+            mQuestionsList = Constants.getQuestions()
+        }
+        if(number==2){
+            mQuestionsList = Constants.getQuestions1()
+        }
+        if(number==3){
+            mQuestionsList = Constants.getQuestions2()
+        }
+        if(number==4){
+            mQuestionsList = Constants.getQuestions3()
+        }
+        if(number==5){
+            mQuestionsList = Constants.getQuestions4()
+        }
 
 
         setQuestion()
